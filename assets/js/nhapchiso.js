@@ -8,7 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
 window.onload = function () {
     var selectedMadk = localStorage.getItem('selected_id_madk');
     var selectedMadkInput = document.getElementById('selected_madk');
+    var selectedMadkInput1 = document.getElementById('selected_madk_check');
     selectedMadkInput.value = selectedMadk;
+    selectedMadkInput1.value = selectedMadk;
+    var formSubmitted = localStorage.getItem('formSubmitted');
+        if (!formSubmitted) {
+            document.getElementById("searchForm").submit();
+            
+            // Đặt cờ để chỉ ra rằng biểu mẫu đã được gửi
+            localStorage.setItem('formSubmitted', true);
+        }
     kiemTraTrangThaiButton();
 
 };

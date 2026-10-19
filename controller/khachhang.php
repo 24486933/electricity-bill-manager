@@ -1,6 +1,7 @@
 <?php
 require_once('../model/KhachHang_Model.php');
 include_once('../model/KhachHang.php');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["searchCustomer"])) {
     require_once('../model/KhachHang.php');
     if ($_POST["searchKH"] == 0) {
@@ -11,8 +12,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["searchCustomer"])) {
         $search_KH_by_Name = searchNameKH($tenkh);
     }
 }
-// Gọi view để hiển thị kết quả
-require_once('../view/timkhachhang.php');
 class KhachHang_Controller {
     private $model;
     
@@ -26,6 +25,7 @@ class KhachHang_Controller {
     }
 
     public function themKhachHang($makh, $tenkh, $diachi, $dt, $cccd) {
+
         $this->model->addKhachHang($makh, $tenkh, $diachi, $dt, $cccd);
         header("Location: index.php");
     }

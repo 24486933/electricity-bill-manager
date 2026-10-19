@@ -1,3 +1,12 @@
+<link rel="stylesheet" href="../assets/css/quanlykhachhang.css?v=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<?php 
+    session_start();
+
+    if(isset($_SESSION['id_nv'])){
+?>
 <?php
 if(isset($_GET['size'])){
     $erro_size = $_GET['size'];
@@ -15,7 +24,7 @@ if(isset($_GET['p'])){
 }
 ?>
 <link rel="stylesheet" href="../assets/css/quanlydien.css">
-<button><a href="../controller/tiendien.php?act=quanly">Quay lại</a></button>
+<button class="btn"><a href="../controller/tiendien.php?act=quanlyhoadon">Quay lại</a></button>
 
 <h2>Thông tin khách hàng</h2>
 <?php 
@@ -23,7 +32,7 @@ if(isset($_GET['p'])){
             if ($data && !empty($data)){
     ?>
 <?php
-    $listsPerPage = isset($_GET['size']) ? (int)$_GET['size'] : 5;
+    $listsPerPage = isset($_GET['size']) ? (int)$_GET['size'] : 10;
     $currentPage = isset($_GET['p']) ? (int)$_GET['p'] : 1;
     $startIndex = ($currentPage - 1) * $listsPerPage; // tính sl kh ở mỗi trang và trang htai
     $filteredCustomers = array_filter($data['khachhang'], function ($khachhang) {
@@ -57,7 +66,7 @@ if(isset($_GET['p'])){
                     <td>".$khachhang['diachi']."</td>
                     <td>".$khachhang['dt']."</td>
                     <td>".$khachhang['cccd']."</td>
-                    <td><button id='button_".$khachhang['makh']."' onclick=\"showDienKe(".$khachhang['makh'].")\">Xem</button></td>
+                    <td><button id='button_".$khachhang['makh']."' onclick=\"showDienKe('".$khachhang['makh']."')\">Xem</button></td>
                     </tr>";
             echo "<tr id='dienke_row_".$khachhang['makh']."' style='display: none;'>
                     <td colspan='6'>
@@ -85,7 +94,7 @@ if(isset($_GET['p'])){
                         if($dienke['trangthai'] == 1){
                             $status_dk = "Còn sử dụng";
                             echo "<td>".$status_dk."</td>
-                            <td><input type='radio' name='selected_id' value='".$dienke['madk']."'/>
+                            <td><input type='radio' name='selected_id'/>
                             </td>";
                         }else{
                             $status_dk = "Đã ngừng sử dụng";
@@ -112,22 +121,22 @@ if(isset($_GET['p'])){
     // hiện các liên kết phân trang
     if ($totalPages > 1) {
         echo '<div></div>
-                <div>';
+        <div>';
         if ($currentPage > 1) {
-            echo '<a href="?act=quanlydien&p=' . ($currentPage - 1) . '&size=' . $listsPerPage . '">&lt;</a>';
+            echo '<button class="navi selected"><a href="?act=quanlydien&p=' . ($currentPage - 1) . '&size=' . $listsPerPage . '">&lt;</a></button>';
         }
         // Tính & hiện các liên kết phân trang
         $start = max(1, $currentPage - 1);
         $end = min($totalPages, $start + 3);
         for ($i = $start; $i <= $end; $i++) {
             if ($i == $currentPage) {
-                echo '<span >' . $i . '</span>';
+                echo '<button class="navi selected chosse"><span >' . $i . '</span></button>';
             } else {
-                echo '<a href="?act=quanlydien&p=' . $i . '&size=' . $listsPerPage . '">' . $i . '</a>';
+                echo '<button class="navi selected"><a href="?act=quanlydien&p=' . $i . '&size=' . $listsPerPage . '">' . $i . '</a></button>';
             }
         }
         if ($currentPage < $totalPages) {
-            echo '<a href="?act=quanlydien&p=' . ($currentPage + 1) . '&size=' . $listsPerPage . '">&gt;</a>';
+            echo '<button class="navi selected"><a  href="?act=quanlydien&p=' . ($currentPage + 1) . '&size=' . $listsPerPage . '">&gt;</a></button>';
         }
         echo '</div>';
     }
@@ -141,3 +150,7 @@ if(isset($_GET['p'])){
 ?>
 
 <script src="../assets/js/dienkekh.js"></script>
+<script>localStorage.removeItem('formSubmitted');</script>
+<?php }else{
+    header('location: ../controller/nhanvien.php?act=login');
+} ?>

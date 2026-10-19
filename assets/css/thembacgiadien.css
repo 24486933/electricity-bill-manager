@@ -1,0 +1,163 @@
+/* Thiết lập box-sizing cho toàn bộ phần tử */
+* {
+  box-sizing: border-box;
+}
+
+/* Reset margin và padding */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Đảm bảo body có chiều cao 100% */
+body {
+  height: auto;
+  font-family: Arial, sans-serif; /* Thay đổi font chữ nếu cần */
+}
+
+/* Các phần tử chính */
+.side-bar {
+    width: 280px;
+    height: 100vh;
+    background-color: #333;
+    position: fixed; /* để sidebar luôn cố định trên màn hình */
+    top: 5px;
+    left: 5px;
+    border-radius: 5px;
+    overflow-y: auto; /* Cho phép cuộn nếu nội dung quá dài */
+
+}
+
+.content {
+    margin-left: 280px;
+    padding: 15px;
+    margin-top: 5px;
+}
+.img {
+  width: 180px;
+  border-radius: 50%;
+  position: relative;
+  left: 50px;
+  top: 30px;
+}
+
+
+.btnnn, .btnnnn {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 15px 24px;
+  margin-bottom: 10px;
+}
+.btnn {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px 24px;
+    margin-bottom: 10px;
+    margin-left: 75px;
+}
+
+.btnnn a, .btnn a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Form */
+.them {
+  width: 70%;
+  margin: 20px auto; /* Canh giữa form */
+  display: flex;
+  flex-direction: column;
+}
+
+.them label {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.them input[type="number"],
+.them input[type="text"] {
+  width: calc(100% - 20px); /* Đảm bảo input rộng bằng form và có chút padding */
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+.span {
+  display: block;
+  top: -650px;
+  left: -165px;
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+/* CSS cho form "Thêm giá điện" */
+.them {
+  width: 70%; /* Độ rộng của form */
+  margin: 20px auto; /* Canh giữa form */
+  display: flex;
+  flex-direction: column;
+}
+
+.them label {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.them input[type="number"],
+.them input[type="text"] {
+  width: calc(100% - 20px); /* Đảm bảo input rộng bằng form và có chút padding */
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+}
+
+.sub {
+  background-color: #333; /* Màu nền của nút */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 10px; /* Khoảng cách giữa nút và input */
+  width: 150px; /* Độ rộng của nút */
+}
+
+/* Đảm bảo nút được căn giữa */
+.sub {
+  align-self: center;
+}
+
+h3 {
+  width: 300px;
+  padding: 14px 5px 0px;
+}
+.so {
+  top: -650px;
+  left: 375px;
+  margin-right: 40px;
+  height: 40px;
+  width: 250px;
+}
+.lso {
+  font-weight: bold;
+  padding: 10px;
+}
+span {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  display: block; /* làm cho phần tử trở thành block-level để có thể căn giữa */
+  font-weight: bold;
+}

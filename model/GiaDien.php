@@ -1,11 +1,11 @@
 <?php
 function giadien_showAll(){
-    $sql = "SELECT * FROM giadien";
+    $sql = "SELECT * FROM giadien order by ngayapdung DESC";
     return pdo_query($sql);
 }
 
 function cbbNgay(){
-    $sql ="SELECT DISTINCT DATE_FORMAT(ngayapdung, '%Y-%m-%d %H:%i:%s') AS ngayapdung FROM giadien";
+    $sql ="SELECT DISTINCT DATE_FORMAT(ngayapdung, '%Y-%m-%d %H:%i:%s') AS ngayapdung FROM giadien order by ngayapdung DESC";
     return pdo_query($sql);
 }
 function showGia_cbb($ngay){
