@@ -1,6 +1,7 @@
 <?php
 global $conn;
-  // Hàm này quản lý việc kết nối với csdl
+  
+
   function pdo_con(){
     global $conn;
 
@@ -10,7 +11,7 @@ global $conn;
 
     try {
       // Tạo đối tượng kết nối 
-      $conn = new PDO("mysql:host=$servername;dbname=testdien", $username, $password);
+      $conn = new PDO("mysql:host=$servername;dbname=quan_ly_db", $username, $password);
       // set the PDO error mode to exception
       //Thiết lập chế độc hiển thị lỗi
       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -22,7 +23,7 @@ global $conn;
       echo "Lỗi kết nối: " . $e->getMessage();
     }
   }
-
+//Các hàm này sẽ sử dụng prepared statements để thực thi truy vấn SQL với các tham số, giúp ngăn chặn tấn công SQL injection.
   // Chạy câu truy vấn
   function pdo_execute($sql){
     $sql_args = array_slice(func_get_args(), 1);

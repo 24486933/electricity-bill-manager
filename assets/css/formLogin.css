@@ -1,0 +1,238 @@
+:root {
+    --text-color-bold: #555555;
+    --text-color-light: #a7a9a8;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+    background: rgba(59, 59, 58, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .login-container {
+    width: 60%;
+    height: 78vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 4px 2px 5px 2px rgb(133, 133, 132);
+    overflow: hidden;
+  }
+  .login-background {
+    width: 50%;
+    height: 100%;
+  }
+  video {
+    width: 100%;
+    height: 552.237px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    position: relative;
+    left: -5px;
+    top: 0.15px;
+    transform: scaleY(1.2);
+  }
+  
+  .login-form {
+    width: 50%;
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .login-title {
+    width: 80%;
+    height: 5%;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    color: var(--text-color-bold);
+    font-size: 35px;
+    font-weight: bold;
+  }
+  form {
+    width: 80%;
+    height: 70%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  h4 {
+    letter-spacing: 2px;
+    color: var(--text-color-light);
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+  }
+  .login-side {
+    width: 90%;
+    height: 40%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .login-input {
+    width: 100%;
+    height: 40%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  label {
+    margin-top: 10px;
+    position: relative;
+    top: -25px;
+  }
+  .login-input label {
+    color: var(--text-color-light);
+    font-size: 12.5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .login-input input {
+    height: 65%;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 2px solid var(--text-color-light);
+    outline: none;
+    text-indent: 5px;
+    color: var(--text-color-bold);
+    font-size: 15px;
+  }
+  .label {
+    position: relative;
+    top: 0px;
+  }
+  .pass {
+    position: relative;
+    top: 20px;
+  }
+  
+  .submit {
+    width: 180px;
+    height: 45px;
+    background-color: var(--text-color-bold);
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  .submit:hover {
+    width: 220px;
+  }
+  .register-side {
+    position: relative;
+    top: 30px;
+    font-size: 14px;
+  }
+  .register-side span {
+    margin-right: 5px;
+    color: var(--text-color-light);
+  }
+  .register-side a {
+    color: var(--text-color-bold);
+    font-weight: bold;
+  }
+  .error {
+    position: absolute;
+    top: 425px;
+    left: 805px;
+  }
+  .password-show_hide span {
+      position: absolute;
+      right: 25%;
+      top: 64%;
+      transform: translateY(-50%);
+      font-size: 15px;
+      color: #8e44ad;
+      cursor: pointer;
+      display: none; /* Hide the eye icon by default */
+  }
+  
+  .password-show_hide input:placeholder-shown~span {
+      display: none; /* Hide the eye icon when the placeholder is shown */
+  }
+  
+  .password-show_hide input:not(:placeholder-shown)~span {
+      display: block; /* Show the eye icon when there is content in the input field */
+  }
+  
+  .password-show_hide span i.hide-btn::before {
+    content: "\f070";
+  }
+  /* Adjust input height for small screens */
+  @media (max-width: 600px) {
+    .login-input input {
+      height: 45px;
+    }
+  }
+  
+  /* Adjust button width for small screens */
+  @media (max-width: 400px) {
+    .submit {
+      width: 100%;
+    }
+  }
+  /* Additional styles for small screens */
+@media only screen and (max-width: 768px) {
+    .login-container {
+      width: 95%;
+    }
+    
+    .login-background video {
+      border-radius: 0;
+    }
+  }
+  
+  /* Additional styles for extra small screens */
+  @media only screen and (max-width: 480px) {
+    .login-title {
+      font-size: 30px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .login-title {
+        font-size: 25px;
+    }
+    .login-side {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .login-input input {
+        font-size: 13px;
+        height: 35px;
+    }
+    .login-input label {
+        font-size: 11px;
+        top: -20px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .submit {
+        width: 100%;
+        font-size: 14px;
+        height: 40px;
+    }
+}

@@ -1,33 +1,116 @@
- .modal {
-     display: none;
-     position: fixed;
-     z-index: 1;
-     left: 0;
-     top: 0;
-     width: 100%;
-     height: 100%;
-     overflow: auto;
-     background-color: rgba(0, 0, 0, 0.4);
- }
-
- .modal-content {
-     background-color: #fefefe;
-     margin: 10% auto;
-     padding: 20px;
-     border: 1px solid #888;
-     width: 80%;
- }
-
- .close {
-     color: #aaa;
-     float: right;
-     font-size: 28px;
-     font-weight: bold;
- }
-
- .close:hover,
- .close:focus {
-     color: black;
-     text-decoration: none;
-     cursor: pointer;
- }
+:root {
+    --text-color-bold: #333;
+    --text-color-light: #a7a9a8;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 30px;
+  }
+  .xem {
+    width: 150px;
+    height: 40px;
+    position: relative;
+    top: 30px;
+    left: 10px;
+    background-color: var(--text-color-bold);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  table {
+    width: 90%;
+    margin: 50px auto;
+    border-collapse: collapse;
+  }
+  table td {
+    text-align: center;
+    padding: 20px;
+  }
+  table th {
+    background-color: #74c0fc;
+    text-align: center;
+    color: rgb(31, 61, 87);
+    padding: 20px;
+  }
+  .watch {
+    margin-left: 10px;
+    background-color: #74c0fc;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .addad {
+    color: rgb(31, 61, 87);
+    text-decoration: none;
+    font-weight: bold;
+  }
+ 
+  .navi {
+    margin: 20px 15px;
+    position: relative;
+    left: 660px;
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--text-color-bold);
+    color: rgb(239, 230, 190);
+    font-weight: bold;
+  
+  }
+  .navi a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  .chosse {
+    border: 2px solid gold;
+  }
+  
+  .selected a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  span {
+    position: initial;
+    left: 80px;
+}

@@ -65,8 +65,6 @@ if (isset($_GET['act'])) {
             
             break;
         case 'quanly':
-            session_start();
-
             include "../view/quanly.php";
             break;
         default:

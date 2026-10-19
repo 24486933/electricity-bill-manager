@@ -1,0 +1,59 @@
+:root {
+  --text-color-bold: #333;
+  --text-color-light: #a7a9a8;
+  --td-color: #74c0fc;
+}
+body {
+  color: var(--text-color-bold);
+}
+h2 {
+  font-size: 40px;
+  text-align: center;
+  margin: 0 auto;
+}
+.info {
+  width: 90%;
+  margin: 30px auto;
+  height: 150px;
+  border-collapse: collapse;
+}
+
+td {
+  text-align: center;
+  padding: 20px;
+}
+th {
+  background-color: #74c0fc;
+  padding: 20px;
+}
+.infor {
+  width: 90%;
+  margin: 30px auto;
+  height: auto;
+  border-collapse: collapse;
+}
+.b {
+  position: relative;
+  left: 70px;
+  font-weight: bold;
+  font-size: 20px;
+}
+button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.back {
+  position: relative;
+  top: 50px;
+  left: -240px;
+}
+span {
+  position: relative;
+
+  left: 70px;
+}

@@ -14,7 +14,7 @@ if (isset($_GET['makh'])) {
     // Kiểm tra xem khách hàng có tồn tại hay không
     if ($khachhang_info) {
         // Chuyển hướng người dùng đến trang view sửa thông tin
-        header("Location: ../view/sua.php?makh=" . $makh);
+        header("Location: ../view/suakhachhang.php?makh=" . $makh);
         exit(); // Đảm bảo kết thúc luồng xử lý sau khi chuyển hướng
     } else {
         // Hiển thị thông báo nếu không tìm thấy thông tin khách hàng

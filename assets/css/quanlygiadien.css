@@ -1,0 +1,114 @@
+:root {
+  --text-color-bold: #333;
+  --text-color-light: #a7a9a8;
+  --td-color: #74c0fc;
+}
+body {
+  color: var(--text-color-bold);
+}
+.btn {
+  width: 140px;
+  height: 35px;
+  background-color: var(--text-color-bold);
+  border-radius: 5px;
+  border: none;
+  margin: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  left: 70px;
+}
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+h2 {
+  margin: 20px auto;
+  font-size: 40px;
+  text-align: center;
+}
+label {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  left: 70px;
+}
+select {
+  width: 300px;
+  background-color: var(--text-color-bold);
+  height: 60px;
+  color: white;
+  font-weight: bold;
+  text-indent: 10px;
+  margin-top: 10px;
+  position: relative;
+  left: 70px;
+}
+.custom-select {
+  width: 300px;
+  background-color: var(--text-color-bold);
+  height: 60px;
+  color: white;
+  font-weight: bold;
+  text-indent: 10px;
+  margin-top: 10px;
+  position: relative;
+  left: 70px;
+}
+
+.custom-select:focus {
+  height: auto; /* Mở rộng chiều cao khi focus */
+  outline: none; /* Loại bỏ viền */
+}
+
+.custom-select option {
+  background-color: var(--text-color-bold);
+  color: white;
+  font-weight: bold;
+}
+h4 {
+  font-size: 25px;
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 20px auto;
+}
+td,
+th {
+  padding: 20px;
+}
+th {
+  background-color: var(--text-color-bold);
+  color: white;
+}
+.navi {
+  margin: 20px 15px;
+  position: relative;
+  left: 660px;
+  border: none;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--text-color-bold);
+  color: rgb(239, 230, 190);
+  font-weight: bold;
+
+}
+.navi a {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+.chosse {
+  border: 2px solid gold;
+}
+
+.selected a {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
