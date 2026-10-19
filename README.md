@@ -1,4 +1,4 @@
-# Kiểm thử nâng cao (Advanced Testing) - Quản lý Tiền điện
+# Kiểm thử nâng cao - Quản lý Tiền điện
 
 Phần này trình bày chi tiết về công tác **Kiểm thử nâng cao** (gồm Kiểm thử bảo mật và Kiểm thử hiệu năng) được thực hiện trên hệ thống **Quản lý Tiền điện nội bộ** nhằm đảm bảo tính an toàn bảo mật và khả năng chịu tải thực tế.
 
