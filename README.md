@@ -1,5 +1,5 @@
 <div align="center">
-  <h1> Hệ Thống Quản Lý Và Tính Tiền Điện Sinh Hoạt</h1>
+  <h1> Hệ Thống Quản Lý Hóa Đơn Tiền Điện</h1>
   <p><i>Đồ án hỗ trợ nhân viên công ty điện lực tối ưu hóa quy trình quản lý, tính toán và xuất hóa đơn tiền điện.</i></p>
 </div>
 
