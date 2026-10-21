@@ -1,0 +1,43 @@
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    
+    th, td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .navi {
+        margin: 20px 15px;
+        position: relative;
+        left: 660px;
+        border: none;
+        border-radius: 5px;
+        width: 30px;
+        height: 30px;
+        background-color: var(--text-color-bold);
+        color: rgb(239, 230, 190);
+        font-weight: bold;
+      
+      }
+      .navi a {
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+      }
+      .chosse {
+        border: 2px solid gold;
+      }
+      
+      .selected a {
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+      }

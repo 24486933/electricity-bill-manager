@@ -1,0 +1,95 @@
+:root {
+  --text-color-bold: #333;
+  --text-color-light: #a7a9a8;
+  --td-color: #74c0fc;
+}
+body {
+  background-color: #333;
+}
+.content {
+  width: 85%;
+  height: 85%;
+  margin: 50px auto;
+  box-shadow: 1px 1px 4px 2px var(--text-color-bold);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+button,
+select,
+input[type="submit"] {
+  position: relative;
+  top: 20px;
+  left: 520px;
+  background-color: var(--text-color-bold);
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+}
+select {
+  left: 0;
+  text-indent: 10px;
+}
+input[type="submit"] {
+  left: 50%;
+ 
+}
+.aaa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30%;
+  width: 1000px;
+}
+label {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+textarea {
+  width: 700px;
+}
+input[type="datetime-local"],
+input[type="text"] {
+  width: 700px;
+  height: 35px;
+}
+input[type="text"] {
+  position: relative;
+  left: 90px;
+}
+.se {
+  position: relative;
+  top: 20px;
+  left: -12%;
+}
+.sub {
+  position: relative;
+  left: -520px;
+  top: 50px;
+}
+.back {
+  top: -275px;
+}
+.h {
+  position: relative;
+  left: 20px;
+}
+/* Điều chỉnh CSS cho lớp "errormesseger" */
+.errormesseger {
+  color: red;
+  font-weight: bold;
+  font-size: 25px;
+  width: 80%;
+  text-align: center;
+  margin: 20px auto;
+  margin-bottom: 10px; /* Thêm khoảng cách dưới */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
